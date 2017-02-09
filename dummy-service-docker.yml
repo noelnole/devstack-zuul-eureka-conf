@@ -1,0 +1,16 @@
+
+# Configuration when the active profile is "docker"
+spring:
+  profiles: docker
+
+# Dummy Server port comes from docker-compose.yml
+server:
+  port: ${SERVICE_PORT}
+
+# Dockerized Eureka Server configuration
+eureka:
+  instance:
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: ${REGISTRY_URL}
