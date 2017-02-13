@@ -1,1 +1,9 @@
 message : Hello Person Service DOCKER
+
+server:
+  port: ${SERVICE_PORT}
+
+eureka:
+  client:
+    service-url:
+      defaultZone: ${REGISTRY_URL}
