@@ -1,1 +1,9 @@
 message : Hello Account Service
+
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/macroarchitecture
+      repositories:
+         enabled: true
+
