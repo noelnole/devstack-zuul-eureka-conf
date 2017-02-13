@@ -1,4 +1,1 @@
-
-logging:
-  level:
-    root: INFO
+message : Hello Person Service DOCKER
