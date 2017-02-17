@@ -2,9 +2,9 @@ message : Hello Client Service
 
 # this properties are used only if the configuration server is not available
 #persons_url: http://localhost:9999/api/person-service/people/{dni}
-persons_url: http://localhost:9999/people/people/{dni}
+persons_url: http://localhost:9999/people/{dni}
 
 # list of different urls where can be accounts
 #accounts_url: http://localhost:9999/api/account-service/accounts/byDni/{dni}
-accounts_url: http://localhost:9999/account/accounts/byDni/{dni}
+accounts_url: http://localhost:9999/accounts/byDni/{dni}
 
