@@ -1,5 +1,25 @@
 message : Hello Client Service
 
+sable spring basic authentication security
+security:
+  basic:
+    enabled: false
+  sessions: ALWAYS
+  oauth2:
+    resource:
+      jwt:
+        keyValue: |
+           -----BEGIN PUBLIC KEY-----
+           MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq6hU7H0ZhhxEJzigXpdP8ZcaOiCrKYduuJGq9pkA84HsLXDFnSKzcZtJLx4n7Uw4hmAbhfbEwBRTuU7zSsYPDVaT4uyNNzTM4p8qrJQiFs5NsXirltvNQoJGr9GDwBVVD3/jh4+1EDyvH0T9RG2QI1MT1kX7oiI0aHd+ziPJSkVXJdsYmXI+BLHmW0dR7cNdNOocCfEiCQs4J2Xpq9IwqHFA4fTRxbTJUj1TYRAIOWT9SiCbryCxf8lZ9E5bCa9OYKyubFKfo5atE8bvLMB9qTgX0jraeMxNbcDfTM0oHyREBAS/b3fYgNqH7nY5nQUW4zJI9kDhCQBqzzVAR8o6MwIDAQAB
+           -----END PUBLIC KEY-----
+      #id: openid
+      #serviceId: ${PREFIX:}resource
+
+
+logging.level.org.springframework.security.oauth2: DEBUG
+
+message : Hello Client Service
+
 # this properties are used only if the configuration server is not available
 #persons_url: http://localhost:9999/api/person-service/people/{dni}
 persons_url: http://localhost:9999/api/people/{dni}
@@ -7,4 +27,3 @@ persons_url: http://localhost:9999/api/people/{dni}
 # list of different urls where can be accounts
 #accounts_url: http://localhost:9999/api/account-service/accounts/byDni/{dni}
 accounts_url: http://localhost:9999/api/accounts/byDni/{dni}
-
