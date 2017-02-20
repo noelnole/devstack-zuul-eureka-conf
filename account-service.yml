@@ -7,3 +7,18 @@ spring:
       repositories:
          enabled: true
 
+
+
+security:
+  # Disable  HTTP Basic in the resource server (to prevent the browser from popping up authentication dialogs
+  basic:
+    enabled: false
+  sessions: NEVER
+  oauth2:
+    resource:
+      jwt:
+        keyValue: |
+           -----BEGIN PUBLIC KEY-----
+           MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAq6hU7H0ZhhxEJzigXpdP8ZcaOiCrKYduuJGq9pkA84HsLXDFnSKzcZtJLx4n7Uw4hmAbhfbEwBRTuU7zSsYPDVaT4uyNNzTM4p8qrJQiFs5NsXirltvNQoJGr9GDwBVVD3/jh4+1EDyvH0T9RG2QI1MT1kX7oiI0aHd+ziPJSkVXJdsYmXI+BLHmW0dR7cNdNOocCfEiCQs4J2Xpq9IwqHFA4fTRxbTJUj1TYRAIOWT9SiCbryCxf8lZ9E5bCa9OYKyubFKfo5atE8bvLMB9qTgX0jraeMxNbcDfTM0oHyREBAS/b3fYgNqH7nY5nQUW4zJI9kDhCQBqzzVAR8o6MwIDAQAB
+           -----END PUBLIC KEY-----
+
